@@ -19,7 +19,8 @@
     .card{background:var(--card);border-radius:16px;padding:22px;box-shadow:0 6px 30px rgba(2,6,23,0.6);}
     h1{font-size:28px;margin:0}
     p.lead{color:var(--muted);margin-top:8px}
-    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#022; font-weight:600;text-decoration:none;transition:0.2s}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;background:var(--accent);color:#022;font-weight:600;text-decoration:none;transition:0.2s}
+    .btn img{width:20px;height:20px;border-radius:4px}
     .btn:hover{transform:translateY(-2px);opacity:0.9}
     .mutebtn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
     .features{display:flex;gap:12px;margin-top:16px}
@@ -84,7 +85,7 @@
             </div>
 
             <div style="margin-top:14px">
-              <a class="btn" id="downloadBtn">Download Client</a>
+              <a class="btn" id="downloadBtn"><img src="windows.png" alt="Windows">Download Client</a>
               <a class="mutebtn" style="margin-left:10px" id="registerBtn">Register</a>
             </div>
 
@@ -99,7 +100,7 @@
           <div class="card">
             <h3 style="margin:0">Quick Downloads</h3>
             <div class="download-list">
-              <div class="download-item"><div>Windows Launcher</div><div><a href="#" class="btn small">Download</a></div></div>
+              <div class="download-item"><div>Windows Launcher</div><div><a href="#" class="btn small"><img src="windows.png" alt="Windows">Download</a></div></div>
               <div class="download-item"><div>Mac Launcher</div><div><a href="#" class="mutebtn">Download</a></div></div>
               <div class="download-item"><div>Android APK</div><div><a href="#" class="mutebtn">Download</a></div></div>
             </div>
@@ -115,7 +116,7 @@
             </div>
 
             <div style="margin-top:12px">
-              <a class="btn" id="discordBtn">Join Discord</a>
+              <a class="btn" id="discordBtn"><img src="discord.jpeg" alt="Discord">Join Discord</a>
             </div>
           </div>
         </aside>
@@ -131,10 +132,10 @@
           <h4>Host Files</h4>
           <p class="small">Download host files required to connect to Growfax:</p>
           <div class="host-buttons">
-            <a href="Growfax_VirtualHost.txt" download class="btn">📁 Growfax Virtual Host</a>
-            <a href="PowerTunel_Host.txt" download class="btn">🌐 PowerTunnel Host</a>
-            <a href="GrowFax ios.txt" download class="btn">📱 GrowFax iOS Host</a>
-            <a href="Growfax_Patched_.bat" download class="btn">⚙️ Growfax Patched BAT</a>
+            <a href="Growfax_VirtualHost.txt" download class="btn"><img src="virtual-host.png" alt="Virtual Host">Growfax Virtual Host</a>
+            <a href="PowerTunel_Host.txt" download class="btn"><img src="powertunnel.jpeg" alt="PowerTunnel">PowerTunnel Host</a>
+            <a href="GrowFax ios.txt" download class="btn"><img src="surge5.png" alt="iOS">GrowFax iOS Host</a>
+            <a href="Growfax_Patched_.bat" download class="btn"><img src="windows.png" alt="Windows">Growfax Patched BAT</a>
           </div>
         </div>
 
@@ -184,7 +185,7 @@
 
     registerBtn.addEventListener('click', ()=>{ openModal('register') });
     document.getElementById('downloadBtn').addEventListener('click', ()=>{ alert('Will download Growfax client (placeholder). Replace link with real file.'); });
-    document.getElementById('discordBtn').addEventListener('click', ()=>{ window.open('https://discord.gg','_blank') });
+    document.getElementById('discordBtn').addEventListener('click', ()=>{ window.open('https://discord.gg/smgS6sq83y','_blank') });
 
     function openModal(mode){
       modal.classList.add('open');
@@ -233,7 +234,7 @@
     setInterval(fetchServerStatus, 12000);
 
     document.addEventListener('keydown', (e)=>{ if(e.key.toLowerCase()==='l'){ openModal('login') } });
-    console.log('Growfax template loaded. Replace download and API links accordingly.');
+    console.log('Growfax template loaded with icons.');
   </script>
 </body>
 </html>
